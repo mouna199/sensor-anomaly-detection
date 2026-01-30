@@ -10,4 +10,5 @@ def load_csv_data(file_path:str) -> pl.DataFrame:
         raise FileNotFoundError(f"Le fichier {file_path} n'existe pas.")
     df = pl.read_csv(file_path, separator=";",try_parse_dates=True)
     return df
-
+#df = load_csv_data("/home/mouna/Projects_data/sensordata_migration_prediction/data/raw/SKAB_data.csv")
+#print(df)
