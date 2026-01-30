@@ -4,13 +4,7 @@ import polars as pl
 
 def create_connection(db_config:dict)-> psycopg2.connect:
     # Create connection
-    con = psycopg2.connect(
-                    host = db_config['host'],
-                    port = db_config['port'],
-                    dbname = db_config['dbname'],
-                    user = db_config['user'],
-                    password = db_config['password'],
-                    )
+    con = psycopg2.connect(**db_config)
     return con
 
 
