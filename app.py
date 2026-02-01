@@ -14,11 +14,6 @@ DB_CONFIG = {'host': 'localhost',
             'user':'postgres',
             'password':'postgres'
             }
-con = psycopg2.connect(**DB_CONFIG)
-df = pl.read_database(
-    query = "SELECT * FROM sensors",
-    connection = con,
-)
 ###########################################################################################
 
 df = ce.load_csv_data(FILE_PATH)
