@@ -55,6 +55,6 @@ streamlit run app.py
 
 ## À venir
 
-- [ ] Modèle de détection d'anomalies
+- [x] Modèle de détection d'anomalies 01/02/2026
 - [ ] API temps réel + Airflow
 - [ ] Déploiement GCP
