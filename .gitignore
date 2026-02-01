@@ -4,3 +4,5 @@ __pycache__/
 .env
 *.ipynb_checkpoints/
 *.streamlit/
+data/raw_for_notebook/SKAB/
+data/raw_for_notebook/SKAB/
