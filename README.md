@@ -1,44 +1,46 @@
 # Sensor Anomaly Detection
-Détection d'anomalies sur données de capteurs industriels.
+
+Anomaly detection pipeline for industrial sensor data.
 
 ## Stack
-- **Data** : TimescaleDB, Polars
-- **Pipeline** : Python (ETL)
-- **Viz** : Streamlit
-- **Infra** : Docker
+
+- **Data**: TimescaleDB, Polars
+- **Pipeline**: Python (ETL)
+- **Viz**: Streamlit
+- **Infra**: Docker
 
 ## Structure
 ```
 ├── src/
-│   ├── extractors/      # Extraction CSV
-│   ├── transformers/    # Nettoyage et transformation
-│   └── loaders/         # Chargement TimescaleDB
-├── notebooks/           # Exploration et modèles
-├── data/raw/            # Données SKAB
-├── app.py               # Dashboard Streamlit
+│   ├── extractors/      # CSV extraction
+│   ├── transformers/    # Data cleaning and transformation
+│   └── loaders/         # TimescaleDB loading
+├── notebooks/           # Exploration and models
+├── data/raw/            # SKAB data
+├── app.py               # Streamlit dashboard
 └── docker-compose.yml   # TimescaleDB
 ```
 
 ## Installation
 ```bash
-# Cloner le repo
-git clone https://github.com/username/sensor-anomaly-detection.git
+# Clone repo
+git clone https://github.com/mouna199/sensor-anomaly-detection.git
 cd sensor-anomaly-detection
 
-# Environnement virtuel
+# Virtual environment
 python -m venv venv
 source venv/bin/activate
 
-# Dépendances
+# Dependencies
 pip install -r requirements.txt
 
-# Lancer TimescaleDB
+# Start TimescaleDB
 docker-compose up -d
 ```
 
-## Utilisation
+## Usage
 ```bash
-# Migration des données
+# Data migration
 python src/migrate_csv.py
 
 # Dashboard
@@ -49,12 +51,14 @@ streamlit run app.py
 
 | Notebook | Description |
 |----------|-------------|
-| `01_anomaly_detection.ipynb` | Comparaison PELT, Z-score, Isolation Forest |
+| `01_anomaly_detection.ipynb` | Comparison of PELT, Z-score, Isolation Forest |
 
 ## Dataset
+
 [SKAB - Skoltech Anomaly Benchmark](https://github.com/waico/SKAB)
 
-## À venir
-- [x] Modèle de détection d'anomalies 01/02/2026
-- [ ] API temps réel + Airflow
-- [ ] Déploiement GCP
+## Roadmap
+
+- [x] Anomaly detection models (01/02/2026)
+- [ ] Real-time API + Airflow
+- [ ] GCP deployment
